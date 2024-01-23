@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-def safe_print_resultision(a, b):
-    """Prints the resultision of a by b."""
+def safe_print_division(a, b):
+    """Prints the division of a by b."""
     try:
         result = a / b
     except (TypeError, ZeroDivisionError):
