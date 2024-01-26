@@ -2,7 +2,7 @@
 
 if __name__ == "__main__":
 
-    """ does some math and print result """
+    """ does some math and gets the result """
 
     from calculator_1 import add, sub, mul, div
 
