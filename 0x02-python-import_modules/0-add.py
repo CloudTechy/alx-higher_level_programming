@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import add_0 as add
+from add_o import add
 
 """ imports the add module """
 
 a = 1
 b = 2
-sum = add.add(a, b)
+sum = add(a, b)
 print("{:d} + {:d} = {:d}".format(a, b, sum))
