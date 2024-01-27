@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     args = sys.argv
     if len(args) == 1:
-        print(".")
+        print("0 arguments.")
     else:
         count = len(args)
         a = "arguments" if count > 2 else "argument"
