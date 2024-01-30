@@ -5,9 +5,10 @@
 """
 Attributes:
         number_of_instances (int): The number of Rectangle instances.
-    """
+"""
 
-    number_of_instances = 0
+    
+number_of_instances = 0
 
 
 class Rectangle:
