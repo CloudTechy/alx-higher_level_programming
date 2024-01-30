@@ -2,6 +2,9 @@
 
 """ creates a rctangle class """
 
+
 class Rectangle:
+
     """ A rectangle class """
+
     pass
