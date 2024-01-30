@@ -2,8 +2,6 @@
 
 """ creates a rctangle class """
 
-if __name__ == "__main___":
-
-    class Rectangle:
-        """ A rectangle class """
-        pass
+class Rectangle:
+    """ A rectangle class """
+    pass
