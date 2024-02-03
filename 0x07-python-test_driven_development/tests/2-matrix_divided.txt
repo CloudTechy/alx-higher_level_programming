@@ -1,0 +1,46 @@
+
+[[ this module intrduces you on how to use 2-matrix_divided.py ]]
+
+Example:
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix = [
+...     [3, 12, 9],
+...     [6, 15, 18]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 4.0, 3.0], [2.0, 5.0, 6.0]]
+
+The original matrix is untouched
+>>> print(matrix)
+[[3, 12, 9], [6, 15, 18]]
+
+quotients are rounded up to two decimal places
+
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 5)
+[[0.2, 0.4, 0.6], [0.8, 1.0, 1.2]]
+
+
+matrix elements cannot be divided by zero
+
+>>> matrix = [[1, 4, 6], [2, 3, 4]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+matrix elements can only be divided by int or float
+
+>>> matrix = [[1, 4, 6], [2, 3, 4]]
+>>> matrix_divided([], "ddd")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+list must be a valid matrix of equal size
+>>> matrix = [[1, 4, 6], [2, 4]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
