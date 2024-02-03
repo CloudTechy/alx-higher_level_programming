@@ -24,6 +24,11 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     new_matrix = []
     for row in matrix:
-        new_row = [round(elem / div, 2) for elem in row]
+        new_row = []
+        for elem in row:
+            if not isinstance(elem, int) and not isinstance(elem, float):
+                raise TypeError("matrix must be a matrix\
+                        (array of arrays of integers/floats)")
+            new_row.append(round(elem / div, 2))
         new_matrix.append(new_row)
     return new_matrix
