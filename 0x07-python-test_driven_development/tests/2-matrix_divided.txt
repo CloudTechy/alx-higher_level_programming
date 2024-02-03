@@ -51,4 +51,5 @@ elements of matrix must be of type int or float
 >>> matrix = [[1, "4", 6], [2, 3, 4]]
 >>> matrix_divided(matrix, 2)
 Traceback (most recent call last):
+...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
