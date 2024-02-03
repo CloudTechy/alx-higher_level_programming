@@ -52,4 +52,4 @@ elements of matrix must be of type int or float
 >>> matrix_divided(matrix, 2)
 Traceback (most recent call last):
 ...
-TypeError: x must be a matrix (list of lists) of integers/floats 
+TypeError: matrix must be a matrix (list of lists) of integers/floats 
