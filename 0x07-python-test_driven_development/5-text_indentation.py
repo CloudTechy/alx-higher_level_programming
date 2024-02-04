@@ -19,9 +19,10 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     buf = text.split(".")
-    main = ("\n\n").join([x.strip() for x in buf])
+    main = "\n\n".join([x.strip() for x in buf])
     buf = main.split("?")
-    main = ("\n\n").join([x.strip() for x in buf])
+    main = "\n\n".join([x.strip() for x in buf])
     buf = main.split(":")
-    main = ("\n\n").join([x.strip() for x in buf])
-    print(main)
+    main = "\n\n".join([x.strip() for x in buf])
+   
+    print(main.strip("\n"))
