@@ -24,5 +24,5 @@ def text_indentation(text):
     main = "\n\n".join([x.strip() for x in buf])
     buf = main.split(":")
     main = "\n\n".join([x.strip() for x in buf])
-   
+
     print(main.strip("\n"))
