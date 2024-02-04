@@ -10,10 +10,10 @@ Traceback (most recent call last):
 TypeError: text must be a string
 
 >>> text_indentation("hello: i am ok. and you? thanks")
-hello
+hello:
 <BLANKLINE>
-i am ok
+i am ok.
 <BLANKLINE>
-and you
+and you?
 <BLANKLINE>
 thanks
