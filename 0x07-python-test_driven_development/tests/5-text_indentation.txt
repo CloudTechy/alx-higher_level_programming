@@ -1,0 +1,19 @@
+
+[[ This is a test module for 5-text_indentation.py]]
+
+Examples:
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+>>> text_indentation(66)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("hello: i am ok. and you? thanks")
+hello
+<BLANKLINE>
+i am ok
+<BLANKLINE>
+and you
+<BLANKLINE>
+thanks
