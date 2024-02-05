@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-""" This module solves matrix multiplication """
+""" This module solves numpy matrix multiplication """
 
 import numpy as np
 
-def matrix_mul(m_a, m_b):
+def lazy_matrix_mul(m_a, m_b):
     """ multiplies two matrix
 
     args:
