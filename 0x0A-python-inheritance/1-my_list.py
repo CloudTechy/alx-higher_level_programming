@@ -5,7 +5,11 @@
 class MyList(list):
     """ A class List """
     
+    def __init__(self):
+        """initializes the object"""
+        super().__init__()
+
     def print_sorted(self):
         """ prints sorted list """
 
-        return (self.sort())
+        return (sorted(self))
