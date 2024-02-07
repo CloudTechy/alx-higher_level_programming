@@ -11,5 +11,6 @@ if __name__ == "__main__":
     try:
         load("add_item.json")
     except FileNotFoundError:
-        args = sys.argv[1:]
-        save(args, filename="add_item.json")
+        pass
+    args = sys.argv[1:]
+    save(args, filename="add_item.json")
