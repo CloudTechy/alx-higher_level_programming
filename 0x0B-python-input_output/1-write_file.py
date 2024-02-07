@@ -8,7 +8,9 @@ def write_file(filename="", text=""):
         Args:
             filename (str): name of file
             text(str): content to write
+        Returns:
+            int: no of bytes
     """
 
-    with open(filename, w, encoding="utf-8") as f:
+    with open(filename, "w", encoding="utf-8") as f:
         return f.write(text)
