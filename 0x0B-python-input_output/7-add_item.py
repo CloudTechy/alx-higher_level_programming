@@ -9,8 +9,8 @@ if __name__ == "__main__":
     load = __import__("6-load_from_json_file").load_from_json_file
 
     try:
-        load("add_item.json")
+        args = load("add_item.json")
     except FileNotFoundError:
-        pass
-    args = sys.argv[1:]
+        args = []
+    args.append(sys.argv[1:])
     save(args, filename="add_item.json")
