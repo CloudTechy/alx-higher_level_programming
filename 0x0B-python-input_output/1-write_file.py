@@ -2,7 +2,7 @@
 """ Module that writes to a file """
 
 
-    def write_file(filename="", text=""):
+def write_file(filename="", text=""):
     """ reads a file and prints to stdout
 
         Args:
