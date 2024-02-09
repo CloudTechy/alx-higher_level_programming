@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def print_matrix_integer(matrix=[[]]):
-    if matrix:
+    if len(matrix) > 0:
         for row in matrix:
             for x in range(len(row)):
                 if x == len(row) - 1:
