@@ -9,9 +9,10 @@ class Rectangle {
   }
 
   print () {
-    while (this.height > 0) {
+    let i = this.height
+    while (i > 0) {
       console.log('X'.repeat(this.width));
-      this.height--;
+      i--;
     }
   }
 
@@ -22,8 +23,8 @@ class Rectangle {
   }
 
   double () {
-    this.width *= 2;
-    this.height *= 2;
+    this.width = this.width * 2;
+    this.height = this.height * 2;
   }
 }
 
