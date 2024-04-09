@@ -1,11 +1,18 @@
 #!/usr/bin/node
 
-function converter (base) {
-  const b = base;
+const _converter = (base) => {
+  return (num) => num.toString(base);
+};
 
-  return function (num) {
-    return num.toString(b);
-  };
-}
+let myConverter = converter(10);
 
-module.exports.converter = converter;
+console.log(myConverter(2));
+console.log(myConverter(12));
+console.log(myConverter(89));
+
+myConverter = converter(16);
+
+console.log(myConverter(2));
+console.log(myConverter(12));
+console.log(myConverter(89));
+export { _converter as converter };
