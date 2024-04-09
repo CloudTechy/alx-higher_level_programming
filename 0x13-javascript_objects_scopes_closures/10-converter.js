@@ -4,13 +4,13 @@ const _converter = (base) => {
   return (num) => num.toString(base);
 };
 
-let myConverter = converter(10);
+let myConverter = _converter(10);
 
 console.log(myConverter(2));
 console.log(myConverter(12));
 console.log(myConverter(89));
 
-myConverter = converter(16);
+myConverter = _converter(16);
 
 console.log(myConverter(2));
 console.log(myConverter(12));
