@@ -1,18 +1,19 @@
 #!/usr/bin/node
 
-const _converter = (base) => {
+const converter = (base) => {
   return (num) => num.toString(base);
 };
 
-let myConverter = _converter(10);
+let myConverter = converter(10);
 
 console.log(myConverter(2));
 console.log(myConverter(12));
 console.log(myConverter(89));
 
-myConverter = _converter(16);
+myConverter = converter(16);
 
 console.log(myConverter(2));
 console.log(myConverter(12));
 console.log(myConverter(89));
-export { _converter as converter };
+
+exports.converter = converter;
