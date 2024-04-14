@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" list all cities from database """
+""" filter cities from database """
 
 import sys
 import MySQLdb
@@ -15,7 +15,7 @@ if (__name__ == '__main__'):
             )
     cur = con.cursor()
     cur.execute("""SELECT * FROM states WHERE name
-                = %s ORDER BY states.id""", (argv[4],))
+                = '{}' ORDER BY states.id""".format(argv[4],))
     row = cur.fetchone()
     print(row)
     cur.close()
