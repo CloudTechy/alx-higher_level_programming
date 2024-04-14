@@ -14,10 +14,9 @@ if (__name__ == '__main__'):
                 port=3306
             )
     cur = con.cursor()
-    cur.execute("""SELECT name FROM cities
-                WHERE state_id = (SELECT id from states
-                WHERE name = %s)
-                ORDER BY cities.id asc""", (argv[4], ))
+    cur.execute("""SELECT cities.name FROM
+                cities INNER JOIN states ON states.id=cities.state_id
+                WHERE states.name=%s""", (sys.argv[4],))
     rows = cur.fetchall()
     toList = list(row[0] for row in rows)
     print(*toList, sep=", ")
