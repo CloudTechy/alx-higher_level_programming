@@ -18,3 +18,5 @@ if (__name__ == '__main__'):
     res = cur.fetchall()
     for row in res:
         print(row)
+    cur.close()
+    con.close()
