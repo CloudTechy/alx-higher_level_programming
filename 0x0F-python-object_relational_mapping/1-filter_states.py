@@ -14,11 +14,8 @@ if (__name__ == '__main__'):
                 port=3306
             )
     cur = con.cursor()
-    query = cur.execute(
-            'SELECT * FROM states '
-            'WHERE name like "N%" '
-            'ORDER BY `id` asc;'
-            )
+    cur.execute("""SELECT * FROM states WHERE name
+                LIKE BINARY 'N%' ORDER BY states.id""")
     res = cur.fetchall()
     for row in res:
         print(row)
