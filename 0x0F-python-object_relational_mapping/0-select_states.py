@@ -3,7 +3,7 @@ import sys
 import MySQLdb
 
 argv = sys.argv
-if (len(argv) == 4):
+if (len(argv) == 4 and __name__ == '__main__'):
     con = MySQLdb.connect(
                 user=argv[1],
                 passwd=argv[2],
