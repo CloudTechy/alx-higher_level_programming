@@ -15,7 +15,7 @@ if (__name__ == '__main__'):
             )
     cur = con.cursor()
     cur.execute("""SELECT * FROM states WHERE name
-                = '{}' ORDER BY states.id""".format(argv[4],))
+                LIKE BINARY '{}' ORDER BY states.id""".format(argv[4],))
     row = cur.fetchone()
     print(row)
     cur.close()
