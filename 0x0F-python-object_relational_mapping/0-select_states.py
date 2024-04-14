@@ -8,7 +8,8 @@ if (__name__ == '__main__'):
                 user=argv[1],
                 passwd=argv[2],
                 db=argv[3],
-                host='localhost'
+                host='localhost',
+                port=3306
             )
     cur = con.cursor()
     query = cur.execute('SELECT * FROM states ORDER BY `id` asc;')
