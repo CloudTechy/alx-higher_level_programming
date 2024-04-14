@@ -16,7 +16,8 @@ if (__name__ == '__main__'):
     cur = con.cursor()
     cur.execute("""SELECT * FROM states WHERE name
                 LIKE BINARY '{}' ORDER BY states.id""".format(argv[4],))
-    row = cur.fetchone()
-    print(row)
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
     cur.close()
     con.close()
