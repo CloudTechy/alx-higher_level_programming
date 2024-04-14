@@ -14,7 +14,9 @@ if (__name__ == '__main__'):
                 port=3306
             )
     cur = con.cursor()
-    query = cur.execute('SELECT states.id  FROM states ORDER BY `id` asc;')
+    query = cur.execute("""SELECT cities.id, cities.name, states.name
+                        FROM states, cities                        WHERE states.id = cities.state_id
+                        ORDER BY `id` asc;""")
     res = cur.fetchall()
     for row in res:
         print(row)
