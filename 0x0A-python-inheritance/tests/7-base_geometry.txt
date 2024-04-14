@@ -16,6 +16,18 @@ Exception: area() is not implemented
 
 >>> bgo.integer_validator("width", 89)
 
+>>> bgo.integer_validator(“age”, “4”)
+
+>>> bgo.integer_validator(“age”, (4,))
+
+>>>bgo.integer_validator(“age”, [3])
+
+>>> bgo.integer_validator(“age”, True)
+
+>>> bgo.integer_validator(“age”, {3, 4})
+
+>>> bgo.integer_validator(“age”, None)
+
 >>> bgo.integer_validator("age", 0)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
