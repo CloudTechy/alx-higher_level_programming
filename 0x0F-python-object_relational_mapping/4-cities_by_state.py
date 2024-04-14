@@ -15,7 +15,8 @@ if (__name__ == '__main__'):
             )
     cur = con.cursor()
     query = cur.execute("""SELECT cities.id, cities.name, states.name
-                        FROM states, cities                        WHERE states.id = cities.state_id
+                        FROM states, cities
+                        WHERE states.id = cities.state_id
                         ORDER BY `id` asc;""")
     res = cur.fetchall()
     for row in res:
