@@ -22,4 +22,4 @@ if __name__ == "__main__":
 
     for st in dbs.query(State).filter(State.name.contains("a")).all():
         dbs.delete(st)
-        dbs.commit()
+    dbs.commit()
