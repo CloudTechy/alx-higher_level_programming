@@ -8,6 +8,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """ defines a state class orm """
     __tablename__ = 'states'
     id = Column(
             Integer,
