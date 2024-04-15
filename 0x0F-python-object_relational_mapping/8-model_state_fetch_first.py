@@ -21,5 +21,7 @@ if __name__ == "__main__":
     dbs = Session()
 
     state = dbs.query(State).first()
-    if (state): print(state.id, state.name, sep=": ")
-    else: print("Nothing")
+    if (state):
+        print(state.id, state.name, sep=": ")
+    else:
+        print("Nothing")
