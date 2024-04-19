@@ -3,7 +3,6 @@
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer, ForeignKey
-from sqlalchemy.orm import relationship
 
 Base = declarative_base()
 
@@ -26,4 +25,3 @@ class City(Base):
             ForeignKey("states.id"),
             nullable=False
             )
-    state = relationship("State", back_populates="cities")
