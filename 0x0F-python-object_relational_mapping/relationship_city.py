@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" create state model """
+""" create city model """
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer, ForeignKey
@@ -8,7 +8,7 @@ Base = declarative_base()
 
 
 class City(Base):
-    """ defines a state class orm """
+    """ defines a city class orm """
     __tablename__ = 'cities'
     id = Column(
             Integer,
