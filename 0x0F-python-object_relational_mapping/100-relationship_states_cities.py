@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """ fetch states from db """
 
-from relationship_state import State
-from relationship_city import Base, City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import sys
+
+from relationship_city import Base, City
+from relationship_state import State
+
 
 if __name__ == "__main__":
     engine = create_engine(
@@ -24,6 +26,5 @@ if __name__ == "__main__":
     newState = State(name='California')
     newCity = City(name='San Francisco')
     newState.cities.append(newCity)
-
     session.add(newState)
     session.commit()
