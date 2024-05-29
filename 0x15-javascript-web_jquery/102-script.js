@@ -4,12 +4,12 @@
 /* global $ */
 
 $(() => {
-  $('INPUT#btn_translate').click(function () {
-    const lang = $('INPUT#language_code').val();
+  $("INPUT#btn_translate").click(function () {
+    const lang = $("INPUT#language_code").val();
 
     const url = `https://hellosalut.stefanbohacek.dev/?lang=${lang}`;
     $.get(url, function (data, statusCode) {
-      $('DIV#hello').text(data.hello);
+      $("DIV#hello").text(data.hello);
     });
   });
 });
